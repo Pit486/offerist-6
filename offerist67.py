@@ -83,12 +83,12 @@ def trv():
 def new_data():
     global data
     with open( 'set.txt', 'r', encoding = 'UTF-8') as f:
-    company_name = (f.readline()).replace('\n','')
-    work_dir = (f.readline()).replace('\n','')
-    o_num = (f.readline()).replace('\n','')
+        company_name = (f.readline()).replace('\n','')
+        work_dir = (f.readline()).replace('\n','')
+        o_num = (f.readline()).replace('\n','')
     offer_number = str((int(o_num))+1)
     with open( 'set.txt', 'w', encoding = 'UTF-8') as f:
-    f.write(company_name + '\n' + work_dir + '\n' + offer_number)
+        f.write(company_name + '\n' + work_dir + '\n' + offer_number)
     data = []
     trv()
     return
@@ -403,6 +403,7 @@ dt = d_now()
 window = Tk()
 window.title("Offerist")
 window.geometry("1000x850")
+window.iconbitmap('offerist.ico')
 #window.configure(background="grey")
 
 f0 = Frame(window)
